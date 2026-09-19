@@ -54,7 +54,7 @@ Diferencias específicas por lenguaje en la versión de clase:
 
 ## 4. Ejemplo en lenguaje estático (TypeScript)
 
-Se usa TypeScript solo aquí, para ilustrar el tipado estático. El compilador detecta el error antes de ejecutar.
+Se usa TypeScript solo aquí, para ilustrar el tipado estático: la `interface` fija el tipo de cada campo y el compilador lo verifica antes de ejecutar.
 
 ```ts
 interface Estudiante {
@@ -64,9 +64,7 @@ interface Estudiante {
 }
 
 const e: Estudiante = { nombre: "Ana Pérez", edad: 20, promedio: 85.5 };
-e.promedio = 90;        // correcto
-// e.promedio = "alto"; // error de compilación: 'string' no es asignable a 'number'
-// e.correo = "x@y.z";  // error de compilación: el campo 'correo' no existe en Estudiante
+e.promedio = 90;
 ```
 
 ## 5. Ejemplo en lenguaje dinámico (Python)
